@@ -95,7 +95,7 @@ export const Register = () => {
     }
   };
   const validateRegion = () => {
-    if (data.region == 'default') {
+    if (data.region === 'default') {
       setMessages({ ...messages, region: 'обязательное поле' });
     } else {
       setMessages({ ...messages, region: false });
@@ -262,7 +262,7 @@ export const Register = () => {
         >
           <span>Примите</span>
         </label>
-        <a href="#" className="forgot-password">
+        <a href="/" className="forgot-password">
           пользовательское соглашение
         </a>
         <span

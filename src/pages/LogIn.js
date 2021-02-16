@@ -119,7 +119,7 @@ export const LogIn = () => {
           {messages.pass}
         </span>
       </div>
-      <a href="#" className="forgot-password">
+      <a href="/" className="forgot-password">
         Забыли пароль?
       </a>
       <button className="submit" type="submit">
