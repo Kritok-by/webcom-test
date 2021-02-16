@@ -118,9 +118,9 @@ export const Register = () => {
         setMessages({ ...data, check: true });
       }
       validateRegion();
-      validateEmail();
       validatePassword();
       validateTel();
+      validateEmail();
     }
   };
   return (

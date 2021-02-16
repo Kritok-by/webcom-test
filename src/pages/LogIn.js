@@ -90,7 +90,7 @@ export const LogIn = () => {
       <label className="form-label" htmlFor="pass">
         Введите пароль
       </label>
-      <div className={`form__input ${messages.email ? 'error' : ''}`}>
+      <div className={`form__input ${messages.pass ? 'error' : ''}`}>
         <input
           type={isOpen ? 'text' : 'password'}
           placeholder="Пароль"
