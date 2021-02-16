@@ -101,6 +101,7 @@ export const Register = () => {
       setMessages({ ...messages, region: false });
     }
   };
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (
@@ -114,13 +115,13 @@ export const Register = () => {
       setMessages({ ...data, check: false });
       console.log(data);
     } else {
-      if (!data.checked) {
-        setMessages({ ...data, check: true });
-      }
       validateRegion();
       validatePassword();
       validateTel();
       validateEmail();
+      if (!data.checked) {
+        setMessages({ ...data, check: true });
+      }
     }
   };
   return (

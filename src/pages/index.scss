@@ -46,30 +46,14 @@
     &.error {
       border-color: #f96d63;
     }
-    .error-message {
-      text-align: center;
-      background-image: url(Polygon.svg);
-      background-position: left;
-      background-size: cover;
-      background-repeat: no-repeat;
-      overflow-x: auto;
-      height: 24px;
-      padding: 0 8px 0 20px;
-      line-height: 24px;
-      max-width: 50%;
-      min-width: 30%;
-      border-radius: 3px;
-      font-weight: 400;
-      font-style: italic;
-      color: #fff;
-      font-size: 12px;
-      white-space: nowrap;
-    }
     &.email {
       margin-bottom: 24px;
     }
     input,
     select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
       outline: none;
       padding: 8px 0;
       width: 100%;
@@ -109,6 +93,25 @@
   }
   .forgot-password {
     color: #00719c;
+  }
+  .error-message {
+    text-align: center;
+    background-image: url(Polygon.svg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: auto;
+    height: 24px;
+    padding: 0 8px 0 20px;
+    line-height: 24px;
+    max-width: 50%;
+    min-width: 30%;
+    border-radius: 3px;
+    font-weight: 400;
+    font-style: italic;
+    color: #fff;
+    font-size: 12px;
+    white-space: nowrap;
   }
   .submit {
     display: block;
