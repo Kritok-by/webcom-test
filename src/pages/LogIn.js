@@ -55,15 +55,13 @@ export const LogIn = () => {
   const openPassword = () => {
     setIsOpen(!isOpen);
   };
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-
+     await validatePassword();
+     await validateEmail();
     if (!messages.email && !messages.pass) {
       console.log(data);
-    } else {
-      validatePassword();
-      validateEmail();
-    }
+    
   };
 
   return (
