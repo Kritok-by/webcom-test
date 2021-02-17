@@ -112,7 +112,7 @@ export const Register = () => {
       !messages.region &&
       data.checked
     ) {
-      setMessages({ ...data, check: false });
+      setMessages({ ...messages, check: false });
       console.log(data);
     } else {
       validateRegion();
