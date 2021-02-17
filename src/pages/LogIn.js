@@ -58,7 +58,7 @@ export const LogIn = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (messages.email && messages.pass) {
+    if (!messages.email && !messages.pass) {
       console.log(data);
     } else {
       validatePassword();
