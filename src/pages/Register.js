@@ -120,7 +120,7 @@ export const Register = () => {
       validateTel();
       validateEmail();
       if (!data.checked) {
-        setMessages({ ...data, check: true });
+        setMessages({ ...messages, check: true });
       }
     }
   };
