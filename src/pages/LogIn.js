@@ -9,8 +9,8 @@ export const LogIn = () => {
     pass: '',
   });
   const [messages, setMessages] = useState({
-    email: null,
-    pass: null,
+    email: false,
+    pass: false,
   });
 
   function validateEmail() {
