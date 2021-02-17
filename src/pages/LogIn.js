@@ -15,40 +15,40 @@ export const LogIn = () => {
 
   function validateEmail() {
     if (validator.isEmpty(data.email)) {
-      setMessages({ ...messages, email: 'обязательное поле' });
+      setMessages(prev=>({ ...prev, email: 'обязательное поле' }));
     } else if (!validator.isEmail(data.email)) {
-      setMessages({ ...messages, email: 'некорректный Email' });
+      setMessages(prev=>({ ...prev, email: 'некорректный Email' }));
     } else {
-      setMessages({ ...messages, email: false });
+      setMessages(prev=>({ ...prev, email: false }));
     }
   }
   const validatePassword = () => {
     const patt = /^[a-zA-Z\d]+$/i;
     switch (true) {
       case validator.isEmpty(data.pass):
-        setMessages({ ...messages, pass: 'обязательное поле' });
+        setMessages(prev=>({ ...prev, pass: 'обязательное поле' }));
         break;
       case data.pass.length < 8:
-        setMessages({ ...messages, pass: 'не меньше 8 символов' });
+        setMessages(prev=>({ ...prev, pass: 'не меньше 8 символов' }));
         break;
       case !patt.test(data.pass):
-        setMessages({
-          ...messages,
+        setMessages(prev=>{
+          ...prev,
           pass:
             'Пароль должен состоять только из цифр и букв латинского алфавита',
-        });
+        }));
         break;
       case !/[0-9]/.test(data.pass) ||
         !/[a-z]/.test(data.pass) ||
         !/[A-Z]/.test(data.pass):
-        setMessages({
-          ...messages,
+        setMessages(prev=>{
+          ...prev,
           pass:
             'Пароль должен содержать как минимум 1 цифру, 1 заглавную и 1 прописную букву',
-        });
+        }));
         break;
       default:
-        setMessages({ ...messages, pass: false });
+        setMessages(prev=>({ ...messages, pass: false }));
         break;
     }
   };
